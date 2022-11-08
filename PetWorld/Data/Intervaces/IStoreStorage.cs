@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Data.Intervaces
+﻿namespace Data.Intervaces
 {
-    internal class IStoreStorage
+    public interface IStoreStorage
     {
+        public void AddProduct(Product product);
     }
 }
