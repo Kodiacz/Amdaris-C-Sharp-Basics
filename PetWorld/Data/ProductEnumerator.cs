@@ -12,16 +12,16 @@ namespace Data
             this.storeStorage = storeStorage;
 
             // its -1 because the logic starts with MoveNext()
-            this.index = -1;
+            this.index = 0;
         }
 
-        public Product Current => storeStorage[index];
+        public Product Current => this.storeStorage[index];
 
         object IEnumerator.Current => Current;
 
         public void Dispose()
         {
-
+            
         }
 
         public bool MoveNext()
@@ -31,7 +31,7 @@ namespace Data
 
         public void Reset()
         {
-            index = -1;
+            index = 0;
         }
     }
 }

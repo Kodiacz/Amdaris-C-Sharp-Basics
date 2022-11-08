@@ -19,7 +19,8 @@ namespace Data
 
         public IEnumerator<Product> GetEnumerator()
         {
-            return new ProductEnumerator(this);
+            // return new ProductEnumarotr
+            return products.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()

@@ -16,6 +16,5 @@ storeStorage.AddProduct(everland);
 
 foreach (var product in storeStorage)
 {
-    Console.WriteLine(product);
-    //Console.WriteLine($"We have {product.Quantity} {product.Name}");
+    Console.WriteLine($"We have {product.Quantity} {product.Name}");
 }
