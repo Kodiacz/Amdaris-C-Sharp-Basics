@@ -12,7 +12,7 @@ namespace Data
             this.storeStorage = storeStorage;
 
             // its -1 because the logic starts with MoveNext()
-            this.index = 0;
+            this.index = -1;
         }
 
         public Product Current => this.storeStorage[index];
@@ -26,12 +26,12 @@ namespace Data
 
         public bool MoveNext()
         {
-            return ++index > storeStorage.ProductsCount;
+            return ++index < storeStorage.ProductsCount;
         }
 
         public void Reset()
         {
-            index = 0;
+            index = -1;
         }
     }
 }
