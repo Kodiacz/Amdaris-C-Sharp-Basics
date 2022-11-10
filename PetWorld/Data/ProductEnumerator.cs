@@ -4,18 +4,18 @@ namespace Data
 {
     public class ProductEnumerator : IEnumerator<Product>
     {
-        private StoreStorage storeStorage;
+        private readonly List<Product> products;
         private int index;
 
-        public ProductEnumerator(StoreStorage storeStorage)
+        public ProductEnumerator(List<Product> products)
         {
-            this.storeStorage = storeStorage;
+            this.products = products;
 
             // its -1 because the logic starts with MoveNext()
-            this.index = -1;
+            this.index = 0;
         }
 
-        public Product Current => this.storeStorage[index];
+        public Product Current => this.products[index];
 
         object IEnumerator.Current => Current;
 
@@ -26,12 +26,12 @@ namespace Data
 
         public bool MoveNext()
         {
-            return ++index < storeStorage.ProductsCount;
+            return ++index < products.Count;
         }
 
         public void Reset()
         {
-            index = -1;
+            index = 0;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Data
 
         public IEnumerator<Product> GetEnumerator()
         {
-            return new ProductEnumerator(this);
+            return new ProductEnumerator(this.products);
             //return products.GetEnumerator();
         }
 
